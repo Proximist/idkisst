@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 import time
 from datetime import datetime
@@ -7,12 +8,11 @@ import threading
 import re
 import logging
 
-# Set up logging (logs will be saved to bot.log)
+# Set up logging to output to stdout
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    filename="bot.log",
-    filemode="a"
+    stream=sys.stdout
 )
 
 # Import classes from python-telegram-bot v21+
